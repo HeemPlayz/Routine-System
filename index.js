@@ -5,7 +5,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-streaming
  
 const prefix = '+'
  
@@ -466,4 +465,4 @@ client.on("guildCreate", guild => {
   client.channels.get("476342429575020544").send(embed)
 });
  
-client.login('token');
+client.login(process.env.BOT_TOKEN);
