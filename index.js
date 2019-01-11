@@ -57,7 +57,7 @@ if (message.content.startsWith(prefix + 'setgame')) {
 const moment = require('moment')
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(" .Routine Server!",`{type: WATCHING}`);
+ client.user.setActivity(".Routine Server!", {type: 'WATCHING'})
 });
 
 client.on("message", message => {
@@ -446,23 +446,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
     },3000);
   });
   }
-});
-client.on("guildCreate", guild => {
-    let embed = new Discord.RichEmbed ()
-    .setTitle('Bot Logs')
-    .addField(' **Bot joined to :**[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
-    .setFooter('The bot is happy')
-    .setTimestamp()
-    client.channels.get("476342429575020544").send(embed)
-  });
- 
-  client.on("guildDelete", guild => {
-  let embed = new Discord.RichEmbed ()
-  .setTitle('Bot Logs')
-  .addField(' **Bot left from :**[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
-  .setFooter('The bot is crying')
-  .setTimestamp()
-  client.channels.get("476342429575020544").send(embed)
 });
  
 client.login(process.env.BOT_TOKEN);
