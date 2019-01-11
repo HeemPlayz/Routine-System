@@ -3,7 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client();
  
 client.on('ready', () => {
-  console.log(`Welcome Bro ${client.user.tag}!`);
+  console.log(`Welcome Bro ${client.user.tag}!`); // For  Routine
 });
  
 const prefix = '+'
